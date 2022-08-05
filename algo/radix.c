@@ -12,6 +12,8 @@
 
 #include "../push.h"
 
+//copier la stackA input dans copa pour pouvoir la trier sans bouger input->taba
+
 void	copacopy(t_data *input, int *taba)
 {
 	int	i;
@@ -43,6 +45,9 @@ void	sort_arrayindex(t_data *input)
 	if (temp)
 		sort_arrayindex(input);
 }
+
+// pour chaque int de la stack de base trouvé dans la stack triée, 
+// garder la position (index) dans un autre tableau temporaire
 
 void	indexmatch(t_data *input)
 {
@@ -79,7 +84,9 @@ int	maxbit(t_data *input)
 	return (max);
 }
 
-/* 1è boucle, tant qu'on a pas comparé tous les bits
+/* 
+   indexmatch puis copier le tableau d'index dans la Stack A de base
+   1è boucle, tant qu'on a pas comparé tous les bits
    2è boucle pour compare tous les inputs
 		>> shift jusqu'au max bit, regarder si le bit = 1
    3è push back to a pour avoir une stack B vide
