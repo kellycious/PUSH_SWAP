@@ -37,4 +37,5 @@ int	main(int ac, char **av)
 				sortfinal(&input);
 		}
 	}
+	return (0);
 }
