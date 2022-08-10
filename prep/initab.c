@@ -6,13 +6,13 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:50:39 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 19:30:20 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/11 00:02:49 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
 
-// mettre les nb input dans un tableau d'int
+// remplir stackA (data->taba) with nb input in args
 
 int	*stack_a(t_data *data, char **input)
 {
@@ -30,7 +30,7 @@ int	*stack_a(t_data *data, char **input)
 	return (data->taba);
 }
 
-// check les doublons dans tableau
+// check les doublons dans tableau data->taba
 
 int	check_dbl(int size, t_data *data)
 {
@@ -52,7 +52,7 @@ int	check_dbl(int size, t_data *data)
 	return (0);
 }
 
-// si args no overflow ni caractere alpha, creer tableau + check doublon
+// check si parsing ok (doublon, alpha only, between int min-max)
 
 int	tab_ok(int size, char **input, t_data *data)
 {

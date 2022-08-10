@@ -6,11 +6,16 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:10:51 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 19:20:25 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 23:57:30 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
+
+/* only few solutions:
+213 | 132 | 321 = SA 
+312 = RA 
+231 = RRA */
 
 void	sort_three(int *taba, int size)
 {
@@ -28,6 +33,8 @@ void	sort_three(int *taba, int size)
 			reverse_ra(taba, size);
 	}
 }
+
+// calculer cb de coup pour arriver à la position de la + p'tite valeur
 
 void	sort_four(t_data *input)
 {

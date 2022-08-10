@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/mnt/nfs/homes/khuynh/Desktop/PUSH_SWAP'
+make: Entering directory `/Users/workelly/Desktop/    /PROJECTS/PUSHSWAP'
 cc -Wall -Werror -Wextra -g -c prep/args_check.c -o prep/args_check.o
 cc -Wall -Werror -Wextra -g -c prep/initab.c -o prep/initab.o
 cc -Wall -Werror -Wextra -g -c prep/utils.c -o prep/utils.o
@@ -19,5 +19,5 @@ echo "\033[35mcompiling push_swap... \033[0m"
 ar rcs push_swap.a prep/args_check.o prep/initab.o prep/utils.o algo/radix.o algo/smallalgo.o operations/pushA.o operations/pushB.o operations/reverse_rotate.o operations/rotate.o operations/swap.o main.o
 echo "\033[33marchiving push_swap obj... \033[0m"
 echo "\033[32mPUSH_SWAP COMPILED \033[0m"
-make: Leaving directory '/mnt/nfs/homes/khuynh/Desktop/PUSH_SWAP'
+make: Leaving directory `/Users/workelly/Desktop/    /PROJECTS/PUSHSWAP'
  

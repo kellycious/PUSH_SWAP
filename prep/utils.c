@@ -6,13 +6,13 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 20:51:38 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/11 00:04:05 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
 
-// check que l'input n'est pas encore trie
+// check que l'input n'est pas encore trie || sorted_yesno
 
 int	sorted_yn(t_data *input, int size)
 {
@@ -28,7 +28,7 @@ int	sorted_yn(t_data *input, int size)
 	return (0);
 }
 
-// chercher + gd nombre ds un array
+// chercher + gd nombre ds l'array pour sort3
 
 int	max(int *taba, int size)
 {
@@ -46,7 +46,7 @@ int	max(int *taba, int size)
 	return (j);
 }
 
-// chercher + petit nb dans array
+// chercher + petit nb dans array pour sort3
 
 int	min(int *taba, int size)
 {
@@ -83,7 +83,7 @@ int	position(int *tab, int size, int index)
 	return (pos);
 }
 
-// initialise struct avec malloc stack a/b/copa/index
+// initialise struct avec malloc when needed
 
 int	initstruct(t_data *input, int size)
 {

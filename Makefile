@@ -6,11 +6,11 @@
 #    By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/13 15:12:48 by khuynh            #+#    #+#              #
-#    Updated: 2022/08/10 16:59:05 by khuynh           ###   ########.fr        #
+#    Updated: 2022/08/11 00:24:38 by khuynh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 DSWAP = \
 		prep/args_check.c 			\
@@ -26,7 +26,7 @@ DSWAP = \
 		main.c 						  
 
 OBJS = ${DSWAP:.c=.o}
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
 
 
 # COLORS
@@ -44,11 +44,10 @@ BOLDRED=    \033[1m\033[31m
 BOLDWHITE=    \033[1m\033[37m
 BOLDGREEN=    \033[1m\033[32m
 
-all: ${NAME}
-
 .c.o:
-
 	@cc ${CFLAGS} -c $< -o ${<:.c=.o}
+
+all: ${NAME}
 
 ${NAME} : ${OBJS}
 	@make -C libft
@@ -56,8 +55,6 @@ ${NAME} : ${OBJS}
 	@mv libft.a ${NAME}
 	@echo "${GREEN}LIBFT COMPILED ${RESET}"	
 	@echo "$(MAGENTA)compiling push_swap... $(RESET)"
-	@ar rcs ${NAME} ${OBJS}
-	@echo "$(YELLOW)archiving push_swap obj... $(RESET)"
 	@echo "${GREEN}PUSH_SWAP COMPILED ${RESET}"
 
 clean:

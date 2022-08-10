@@ -6,13 +6,16 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 12:55:12 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 20:20:18 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 23:59:49 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
 
-// push stackB[0] to stackA[0], careful each stack needs to rearrange itself
+/* push stackB[0] to stackA[0], careful each stack needs to rearrange itself
+	1. malloc bigger stack A to copy stackb[0] and shift nb by one, size+1
+	2.copy it back to original stack A
+	3. don't forget to update the size of the stack*/
 
 int	add2taba(t_data *input)
 {

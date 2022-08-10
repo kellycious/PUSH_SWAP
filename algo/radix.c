@@ -12,7 +12,7 @@
 
 #include "../push.h"
 
-//copier la stackA input dans copa pour pouvoir la trier sans bouger input->taba
+//copy stackA input dans copa pour pouvoir la trier sans bouger input->taba
 
 void	copacopy(t_data *input)
 {
