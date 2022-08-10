@@ -1,0 +1,438 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Aug 10 20:38:37 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /mnt/nfs/homes/khuynh/.Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /mnt/nfs/homes/khuynh/Desktop/PUSH_SWAP
+# makefile
+SHELL = /bin/sh
+# environment
+GDM_LANG = en
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# makefile (from 'Makefile', line 29)
+CFLAGS = -Wall -Werror -Wextra -g
+# makefile (from 'Makefile', line 38)
+BLUE = \033[34m
+# environment
+JOURNAL_STREAM = 9:780587
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+IM_CONFIG_PHASE = 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 43)
+BOLDRED = \033[1m\033[31m
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/khuynh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101895/bus
+# makefile (from 'Makefile', line 42)
+BOLDBLACK = \033[1m\033[30m
+# makefile (from 'Makefile', line 28)
+OBJS = ${DSWAP:.c=.o}
+# environment
+MANAGERPID = 112368
+# makefile (from 'Makefile', line 15)
+DSWAP = prep/args_check.c prep/initab.c prep/utils.c algo/radix.c algo/smallalgo.c operations/pushA.c operations/pushB.c operations/reverse_rotate.c operations/rotate.c operations/swap.c main.c 						  
+# environment
+VSCODE_CWD = /mnt/nfs/homes/khuynh/Desktop/PUSH_SWAP
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_101895_IP7ZJu
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /mnt/nfs/homes/khuynh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/101895/gnupg/S.gpg-agent:0:1
+# makefile (from 'Makefile', line 44)
+BOLDWHITE = \033[1m\033[37m
+# environment
+SESSION_MANAGER = local/e1r12p21.clusters.42paris.fr:@/tmp/.ICE-unix/112779,unix/e1r12p21.clusters.42paris.fr:/tmp/.ICE-unix/112779
+# environment
+XDG_RUNTIME_DIR = /run/user/101895
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = db8f447df61c4ba6b9cdcb916af43af6
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/khuynh
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/101895/keyring/ssh
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+PWD = /mnt/nfs/homes/khuynh/Desktop/PUSH_SWAP
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 112736
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'Makefile', line 36)
+GREEN = \033[32m
+# makefile (from 'Makefile', line 34)
+DARK = \033[1;32m
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /mnt/nfs/homes/khuynh
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/khuynh/.config/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
+# environment
+LOGNAME = khuynh
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+ 
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SHLVL = 2
+# makefile (from 'Makefile', line 41)
+WHITE = \033[37m
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = khuynh
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/nfs/homes/khuynh/Desktop
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/101895/vscode-943b8a79-1.70.0-main.sock
+# makefile (from 'Makefile', line 35)
+RED = \033[31m
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 37)
+YELLOW = \033[33m
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 40)
+CYAN = \033[36m
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 45)
+BOLDGREEN = \033[1m\033[32m
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 33)
+RESET = \033[0m
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2a7a50d1_472b_432e_b775_2a0de882fe79
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.4103
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 13)
+NAME = push_swap.a
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 39)
+MAGENTA = \033[35m
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+DOCKER_HOST = unix:///run/user/101895/docker.sock
+# environment
+VSCODE_PID = 193886
+# variable set hash-table stats:
+# Load=119/1024=12%, Rehash=0, Collisions=22/148=15%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 59, inode 255329592): 17 files, no impossibilities.
+
+# 17 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all: push_swap.a
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+operations/pushA.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:20:27.481968898
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+prep/args_check.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:16.906786023
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 16:59:05.890206391
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+operations/pushB.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:17.218787871
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+prep/utils.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:33:15.835648047
+#  File has been updated.
+#  Successfully updated.
+ 
+
+.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 51):
+	@cc ${CFLAGS} -c $< -o ${<:.c=.o}
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 69):
+	@rm -f ${NAME}
+	@rm -f libft/libft.a
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 64):
+	@rm -f ${OBJS}
+	@make clean -C libft
+	@echo "${BOLDGREEN}ALL CLEAN ! ${RESET}"
+
+# Not a target:
+operations/swap.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:17.364788736
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+algo/radix.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:14:27.982760677
+#  File has been updated.
+#  Successfully updated.
+
+push_swap.a: prep/args_check.o prep/initab.o prep/utils.o algo/radix.o algo/smallalgo.o operations/pushA.o operations/pushB.o operations/reverse_rotate.o operations/rotate.o operations/swap.o main.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-10 20:35:34.621488561
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 54):
+	@make -C libft
+	@cp libft/libft.a .
+	@mv libft.a ${NAME}
+	@echo "${GREEN}LIBFT COMPILED ${RESET}"	
+	@echo "$(MAGENTA)compiling push_swap... $(RESET)"
+	@ar rcs ${NAME} ${OBJS}
+	@echo "$(YELLOW)archiving push_swap obj... $(RESET)"
+	@echo "${GREEN}PUSH_SWAP COMPILED ${RESET}"
+
+# Not a target:
+operations/reverse_rotate.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:17.266788155
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:35:34.53048799
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+algo/smallalgo.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:17.128787338
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+prep/initab.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:16.955786314
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+operations/rotate.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-10 20:03:17.320788475
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=0/52=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 37 / storage = 377 B / avg = 10 B
+# current buf: size = 8162 B / used = 377 B / count = 37 / avg = 10 B
+
+# strcache performance: lookups = 59 / hit rate = 37%
+# hash-table stats:
+# Load=37/8192=0%, Rehash=0, Collisions=1/59=2%
+# Finished Make data base on Wed Aug 10 20:38:37 2022
+
+ 

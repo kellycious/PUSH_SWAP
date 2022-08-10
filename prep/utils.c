@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 19:20:56 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 20:51:38 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	position(int *tab, int size, int index)
 	return (pos);
 }
 
-// input taba into my structure + size, empty tabb
+// initialise struct avec malloc stack a/b/copa/index
 
 int	initstruct(t_data *input, int size)
 {

@@ -102,6 +102,7 @@ void	sortfinal(t_data *input)
 	i = 0;
 	size = input->sizeA;
 	indexmatch(input);
+	free(input->taba);
 	input->taba = input->index;
 	while (i < maxbit(input))
 	{
@@ -119,5 +120,4 @@ void	sortfinal(t_data *input)
 		i++;
 	}
 	free(input->copa);
-	free(input->index);
 }
