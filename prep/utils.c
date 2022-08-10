@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/05 03:22:04 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 19:20:56 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 // check que l'input n'est pas encore trie
 
-int	sorted_yn(int *taba, int size)
+int	sorted_yn(t_data *input, int size)
 {
 	int	i;
 
 	i = 0;
 	while (i != size - 1)
 	{
-		if (taba[i + 1] < taba[i])
+		if (input->taba[i + 1] < input->taba[i])
 			return (1);
 		i++;
 	}
@@ -85,12 +85,21 @@ int	position(int *tab, int size, int index)
 
 // input taba into my structure + size, empty tabb
 
-void	initstruct(t_data *input, int *taba, int *tabb, int size)
+int	initstruct(t_data *input, int size)
 {
-	input->taba = taba;
-	input->tabb = tabb;
-	input->copa = malloc(sizeof(int) * size);
-	input->index = malloc(sizeof(int) * size);
 	input->sizeA = size;
 	input->sizeB = 0;
+	input->taba = malloc(sizeof(int) * size);
+	if (!input->taba)
+		return (0);
+	input->tabb = malloc(sizeof(int) * size);
+	if (!input->tabb)
+		return (0);
+	input->copa = malloc(sizeof(int) * size);
+	if (!input->copa)
+		return (0);
+	input->index = malloc(sizeof(int) * size);
+	if (!input->index)
+		return (0);
+	return (1);
 }

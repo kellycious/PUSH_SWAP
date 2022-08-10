@@ -6,11 +6,14 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 14:15:01 by khuynh            #+#    #+#             */
-/*   Updated: 2022/04/13 18:37:48 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 15:52:47 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+#include <limits.h>
+#include <stdio.h>
+
+/*int	ft_atoi(const char *str)
 {
 	long int	nb;
 	long int	sign;
@@ -27,21 +30,52 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] == '0')
+		i++;
+	while (i < 13 && (str[i] >= '0' && str[i] <= '9'))
 	{	
 		nb = nb * 10 + str[i] - '0';
 		i++;
 	}
-	return (sign * nb);
-}
+*/
 
+
+long    ft_atoi(const char *nptr)
+{
+    int        i;
+    long    res;
+    long    minus;
+
+    minus = 1;
+    res = 0;
+    i = -1;
+    while ((*nptr >= 9 && *nptr <= 13) || (*nptr == ' '))
+        nptr++;
+    if (*nptr == '-' || *nptr == '+')
+    {
+        if (*nptr == '-')
+            minus *= -1;
+        nptr++;
+    }
+    while (*nptr == '0')
+        nptr++;
+    while (nptr[++i] && i < 13 && nptr[i] >= '0' && nptr[i] <= '9')
+    {
+	    res = (res * 10 + (nptr[i] - 48));
+	}	
+	if (res < INT_MAX && res > INT_MIN)
+		return (minus * res);
+	else
+		return (2147483648);
+}
 /*
 #include <stdio.h>
 #include <stdlib.h>
 
 int	main()
 {
-	printf("%d\n", ft_atoi(" 	-42"));
-	printf("%d\n", atoi(" 	-42"));
-}	
+	printf("atoi = %ld\n", ft_atoi("2147483649"));
+	printf("int max = %d\n", INT_MAX);
+}
 */
+

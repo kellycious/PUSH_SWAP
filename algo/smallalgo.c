@@ -6,12 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:10:51 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/05 03:21:34 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 19:20:25 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push.h"
-
 
 void	sort_three(int *taba, int size)
 {
@@ -44,7 +43,7 @@ void	sort_four(t_data *input)
 	}
 	else if (position(input->taba, input->sizeA, mini) == 3)
 		reverse_ra(input->taba, input->sizeA);
-	if (sorted_yn(input->taba, input->sizeA) == 0)
+	if (sorted_yn(input, input->sizeA) == 0)
 		return ;
 	push_b(input);
 	sort_three(input->taba, 3);
@@ -70,7 +69,7 @@ void	sort_five(t_data *input)
 	}
 	else if (position(input->taba, input->sizeA, mini) == 4)
 		reverse_ra(input->taba, input->sizeA);
-	if (sorted_yn(input->taba, input->sizeA) == 0)
+	if (sorted_yn(input, input->sizeA) == 0)
 		return ;
 	push_b(input);
 	sort_four(input);

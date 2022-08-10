@@ -6,7 +6,7 @@
 #    By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/13 15:12:48 by khuynh            #+#    #+#              #
-#    Updated: 2022/08/05 03:32:28 by khuynh           ###   ########.fr        #
+#    Updated: 2022/08/10 16:59:05 by khuynh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ DSWAP = \
 		main.c 						  
 
 OBJS = ${DSWAP:.c=.o}
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 
 
 # COLORS

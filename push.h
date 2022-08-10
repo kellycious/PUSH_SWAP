@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.h                                               :+:      :+:    :+:   */
+/*   push.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:09:44 by khuynh            #+#    #+#             */
-/*   Updated: 2022/07/09 14:32:54 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 19:21:52 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,25 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "LIBFT/libft.h"
+# include <limits.h>
+# include "libft/libft.h"
+
+typedef	struct s_data
+{
+	int	*taba;
+	int	*tabb;
+	int *copa;
+	int	*index;
+	int	sizeA;
+	int	sizeB;
+} t_data;
 
 int		no_alpharg(char **args);
-int		no_overflow(char **input);
 int		args_ok(char **input);
-int		*stack_a(int size, char **input);
+int		*stack_a(t_data *data, char **input);
 int		*stack_b(int size, char **input, int *taby);
-int		check_dbl(int size, int *taba);
-int		tab_ok(int size, char **input, int *taba);
+int		check_dbl(int size, t_data *data);
+int		tab_ok(int size, char **input, t_data *data);
 
 void	ft_swap(int *a, int *b);
 void	swap_a(int *taba, int size);
@@ -38,17 +48,7 @@ void	reverse_ra(int *taba, int size);
 void	reverse_rb(int *tabb, int size);
 void	reverse_rr(int *taba, int *tabb, int size);
 
-typedef	struct s_data
-{
-	int	*taba;
-	int	*tabb;
-	int *copa;
-	int	*index;
-	int	sizeA;
-	int	sizeB;
-} t_data;
-
-void	initstruct(t_data *input, int *taba, int *tabb, int size);
+int		initstruct(t_data *input, int size);
 
 int		add2taba(t_data *input);
 int		delete4tabb(t_data *input);
@@ -57,7 +57,7 @@ int		delete4taba(t_data *input);
 int		push_b(t_data *input);
 int		push_a(t_data *input);
 
-int		sorted_yn(int *taba, int size);
+int		sorted_yn(t_data *input, int size);
 int		max(int *taba, int size);
 int		min(int *taba, int size);
 int		position(int *tab, int size, int index);
@@ -72,7 +72,7 @@ void	sortfinal(t_data *input);
 
 void	sort_arrayindex(t_data *input);
 void	indexmatch(t_data *input);
-void	copacopy(t_data *input, int *taba);
+void	copacopy(t_data *input);
 
 
 # endif

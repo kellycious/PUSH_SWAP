@@ -14,14 +14,14 @@
 
 //copier la stackA input dans copa pour pouvoir la trier sans bouger input->taba
 
-void	copacopy(t_data *input, int *taba)
+void	copacopy(t_data *input)
 {
 	int	i;
 
 	i = 0;
 	while (i < input->sizeA)
 	{
-		input->copa[i] = taba[i];
+		input->copa[i] = input->taba[i];
 		i++;
 	}
 }
@@ -103,7 +103,6 @@ void	sortfinal(t_data *input)
 	size = input->sizeA;
 	indexmatch(input);
 	input->taba = input->index;
-	free(input->index);
 	while (i < maxbit(input))
 	{
 		j = 0;
@@ -119,4 +118,6 @@ void	sortfinal(t_data *input)
 			push_a(input);
 		i++;
 	}
+	free(input->copa);
+	free(input->index);
 }

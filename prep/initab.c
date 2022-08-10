@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:50:39 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/05 03:22:00 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/10 19:30:20 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,25 @@
 
 // mettre les nb input dans un tableau d'int
 
-int	*stack_a(int size, char **input)
+int	*stack_a(t_data *data, char **input)
 {
 	int	i;
 	int	j;
-	int	*taba;
 
 	i = 1;
 	j = 0;
-	taba = malloc(sizeof(int) * size);
-	if (!taba)
-		return (0);
-	while (i <= size)
+	while (i <= data->sizeA)
 	{
-		taba[j] = ft_atoi(input[i]);
+		data->taba[j] = ft_atoi(input[i]);
 		i++;
 		j++;
 	}
-	return (taba);
+	return (data->taba);
 }
 
 // check les doublons dans tableau
 
-int	check_dbl(int size, int *taba)
+int	check_dbl(int size, t_data *data)
 {
 	int	i;
 	int	j;
@@ -47,7 +43,7 @@ int	check_dbl(int size, int *taba)
 		j = i + 1;
 		while (j < size)
 		{			
-			if (taba[i] == taba[j])
+			if (data->taba[i] == data->taba[j])
 				return (1);
 			j++;
 		}
@@ -58,32 +54,14 @@ int	check_dbl(int size, int *taba)
 
 // si args no overflow ni caractere alpha, creer tableau + check doublon
 
-int	tab_ok(int size, char **input, int *taba)
+int	tab_ok(int size, char **input, t_data *data)
 {
 	if (size < 1 || args_ok(input) == 1)
 		return (1);
-	taba = stack_a(size, input);
-	if (!taba)
-		return (1);
-	if (check_dbl(size, taba) == 1)
+	if (check_dbl(size, data) == 1)
 	{
-		free(taba);
 		write (2, "ERROR: You have input 2 same nb\n", 33);
 		return (1);
 	}
 	return (0);
-}
-
-// creer une stack B vide de la mm size que stack A, only if input OK
-
-int	*stack_b(int size, char **input, int *taby)
-{
-	int	*tabb;
-
-	if (tab_ok(size, input, taby) == 1)
-		return (0);
-	tabb = malloc(sizeof(int) * size);
-	if (!tabb)
-		return (0);
-	return (tabb);
 }
