@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 18:49:45 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/05 03:21:51 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:48 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 void	ft_swap(int *a, int *b)
 {

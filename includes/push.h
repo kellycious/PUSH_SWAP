@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:09:44 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 20:48:17 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:47:03 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef	struct s_data
 {

@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 12:55:12 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 23:59:49 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:30 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 /* push stackB[0] to stackA[0], careful each stack needs to rearrange itself
 	1. malloc bigger stack A to copy stackb[0] and shift nb by one, size+1

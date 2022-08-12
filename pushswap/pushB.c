@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 12:55:12 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/05 03:21:44 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:32 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 // push stackA[0] to stackB[0], careful each stack needs to rearrange itself
 

@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:10:51 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 23:57:30 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:44 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 /* only few solutions:
 213 | 132 | 321 = SA 

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 //copy stackA input dans copa pour pouvoir la trier sans bouger input->taba
 

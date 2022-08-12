@@ -1,23 +1,56 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/workelly/Desktop/    /PROJECTS/PUSHSWAP'
-cc -Wall -Werror -Wextra -g -c prep/args_check.c -o prep/args_check.o
-cc -Wall -Werror -Wextra -g -c prep/initab.c -o prep/initab.o
-cc -Wall -Werror -Wextra -g -c prep/utils.c -o prep/utils.o
-cc -Wall -Werror -Wextra -g -c algo/radix.c -o algo/radix.o
-cc -Wall -Werror -Wextra -g -c algo/smallalgo.c -o algo/smallalgo.o
-cc -Wall -Werror -Wextra -g -c operations/pushA.c -o operations/pushA.o
-cc -Wall -Werror -Wextra -g -c operations/pushB.c -o operations/pushB.o
-cc -Wall -Werror -Wextra -g -c operations/reverse_rotate.c -o operations/reverse_rotate.o
-cc -Wall -Werror -Wextra -g -c operations/rotate.c -o operations/rotate.o
-cc -Wall -Werror -Wextra -g -c operations/swap.c -o operations/swap.o
-cc -Wall -Werror -Wextra -g -c main.c -o main.o
-make -C libft
-cp libft/libft.a .
-mv libft.a push_swap.a
-echo "\033[32mLIBFT COMPILED \033[0m"	
-echo "\033[35mcompiling push_swap... \033[0m"
-ar rcs push_swap.a prep/args_check.o prep/initab.o prep/utils.o algo/radix.o algo/smallalgo.o operations/pushA.o operations/pushB.o operations/reverse_rotate.o operations/rotate.o operations/swap.o main.o
-echo "\033[33marchiving push_swap obj... \033[0m"
-echo "\033[32mPUSH_SWAP COMPILED \033[0m"
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/args_check.o -c pushswap/args_check.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/initab.o -c pushswap/initab.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/utils.o -c pushswap/utils.c
+ 
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/radix.o -c pushswap/radix.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/smallalgo.o -c pushswap/smallalgo.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/pushA.o -c pushswap/pushA.c
+echo "\033[35massembling in progress...\033[0m"
+ 
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/pushB.o -c pushswap/pushB.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/reverse_rotate.o -c pushswap/reverse_rotate.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/rotate.o -c pushswap/rotate.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+mkdir -p obj
+cc -Wall -Werror -Wextra -MMD -MP -I./includes -g3 -o obj/swap.o -c pushswap/swap.c
+echo "\033[35massembling in progress...\033[0m"
+echo "\033[32mdone and moved into obj directory\033[0m"
+ 
+make: *** No rule to make target `obj/main.o', needed by `push_swap'.
+
 make: Leaving directory `/Users/workelly/Desktop/    /PROJECTS/PUSHSWAP'
  

@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/11 00:04:05 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:52 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 // check que l'input n'est pas encore trie || sorted_yesno
 

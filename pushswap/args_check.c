@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:12:32 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/11 00:00:17 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/12 00:46:19 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push.h"
+#include "../includes/push.h"
 
 // check if there are only nb in args input and no alpha 
 

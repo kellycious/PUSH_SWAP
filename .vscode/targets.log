@@ -8,10 +8,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Aug 10 23:53:33 2022
+# Make data base, printed on Fri Aug 12 00:46:09 2022
 
 # Variables
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -30,43 +31,43 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 29)
-CFLAGS = -Wall -Werror -Wextra -g
-# makefile (from `Makefile', line 38)
+# makefile (from `Makefile', line 35)
+CFLAGS = -Wall -Werror -Wextra -MMD -MP -I./includes -g3
+# makefile (from `Makefile', line 45)
 BLUE = \033[34m
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 43)
+# makefile (from `Makefile', line 50)
 BOLDRED = \033[1m\033[31m
-# makefile (from `Makefile', line 42)
+# makefile (from `Makefile', line 49)
 BOLDBLACK = \033[1m\033[30m
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
-# makefile (from `Makefile', line 15)
-DSWAP = prep/args_check.c prep/initab.c prep/utils.c algo/radix.c algo/smallalgo.c operations/pushA.c operations/pushB.c operations/reverse_rotate.c operations/rotate.c operations/swap.c main.c 						  
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-# makefile (from `Makefile', line 44)
-BOLDWHITE = \033[1m\033[37m
+# makefile (from `Makefile', line 31)
+DEP = ${addprefix ./obj/,${OBJS:%.o=%.d}}
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 36)
+LIB = -Llibft/ -lft
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.9Mx0szKlHm/Listeners
 # automatic
 %F = $(notdir $%)
-# makefile (from `Makefile', line 28)
-OBJS = ${DSWAP:.c=.o}
+# makefile (from `Makefile', line 30)
+OBJS := ./obj/args_check.o ./obj/initab.o ./obj/utils.o ./obj/radix.o ./obj/smallalgo.o ./obj/pushA.o ./obj/pushB.o ./obj/reverse_rotate.o ./obj/rotate.o ./obj/swap.o ./obj/main.o
 # environment
 PWD = /Users/workelly/Desktop/    /PROJECTS/PUSHSWAP
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# makefile (from `Makefile', line 36)
+# makefile (from `Makefile', line 43)
 GREEN = \033[32m
-# makefile (from `Makefile', line 34)
+# makefile (from `Makefile', line 41)
 DARK = \033[1;32m
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
@@ -78,7 +79,10 @@ MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /De
 VSCODE_CODE_CACHE_PATH = /Users/workelly/Library/Application Support/Code/CachedData/da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LOGNAME = workelly
+# makefile (from `Makefile', line 51)
+BOLDWHITE = \033[1m\033[37m
 # environment
+ 
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
@@ -92,7 +96,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 41)
+# makefile (from `Makefile', line 48)
 WHITE = \033[37m
 # default
 MAKE_VERSION := 3.81
@@ -100,8 +104,8 @@ MAKE_VERSION := 3.81
 USER = workelly
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 13)
-NAME = push_swap.a
+# makefile (from `Makefile', line 15)
+NAME = push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -116,7 +120,7 @@ TMPDIR = /var/folders/8k/xj8vflj97cx8l6q9bxbbwh8r0000gp/T/
 VSCODE_IPC_HOOK = /Users/workelly/Library/Application Support/Code/1.70.0-main.sock
 # environment
 MallocNanoZone = 0
-# makefile (from `Makefile', line 35)
+# makefile (from `Makefile', line 42)
 RED = \033[31m
 # makefile
 MAKEFLAGS = Rrqp
@@ -128,13 +132,13 @@ MFLAGS = -Rrqp
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.63760383.63760389
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# makefile (from `Makefile', line 37)
+# makefile (from `Makefile', line 44)
 YELLOW = \033[33m
-# makefile (from `Makefile', line 40)
+# makefile (from `Makefile', line 47)
 CYAN = \033[36m
 # automatic
 +F = $(notdir $+)
-# makefile (from `Makefile', line 45)
+# makefile (from `Makefile', line 52)
 BOLDGREEN = \033[1m\033[32m
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F6:0x0:0x0
@@ -142,12 +146,13 @@ __CF_USER_TEXT_ENCODING = 0x1F6:0x0:0x0
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
+# makefile (from `Makefile', line 17)
+PSFILES = args_check.c initab.c utils.c radix.c smallalgo.c pushA.c pushB.c reverse_rotate.c rotate.c swap.c main.c 						  
 # automatic
 <F = $(notdir $<)
- 
 # environment
 LC_ALL = C
-# makefile (from `Makefile', line 33)
+# makefile (from `Makefile', line 40)
 RESET = \033[0m
 # automatic
 ^F = $(notdir $^)
@@ -155,16 +160,17 @@ RESET = \033[0m
 SUFFIXES := 
 # default
 .INCLUDE_DIRS = /usr/local/include
-# makefile (from `Makefile', line 39)
+# makefile (from `Makefile', line 46)
 MAGENTA = \033[35m
 # environment
 MAKELEVEL := 0
 # environment
 LANG = C
 # environment
+ 
 VSCODE_PID = 27635
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=6/103=6%
+# Load=77/1024=8%, Rehash=0, Collisions=10/115=9%
 
 # Pattern-specific Variable Values
 
@@ -172,36 +178,68 @@ VSCODE_PID = 27635
 
 # Directories
 
-# . (device 16777220, inode 63781083): 17 files, no impossibilities.
+# pushswap (device 16777220, inode 63791125): 12 files, no impossibilities so far.
+# . (device 16777220, inode 63781083): 12 files, no impossibilities.
+# ./pushswap (device 16777220, inode 63791125): 12 files, no impossibilities so far.
 
-# 17 files, no impossibilities in 1 directories.
+# 36 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+obj/%.o: ./pushswap/%.c
+#  commands to execute (from `Makefile', line 60):
+	@mkdir -p ${@D}
+	@cc ${CFLAGS} -o $@ -c $<
+	@echo "${MAGENTA}assembling in progress...${RESET}"
+	@echo "${GREEN}done and moved into obj directory${RESET}"
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
-all: push_swap.a
+# Not a target:
+obj/./obj/pushA.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+all: push_swap
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/pushB.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+pushswap/args_check.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 00:00:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-operations/pushA.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-.PHONY: all clean fclean re
+obj/main.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -213,48 +251,57 @@ operations/pushA.o:
 #  File has not been updated.
 
 # Not a target:
-prep/args_check.o:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  Last modified 2022-08-12 00:45:34
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+ 
 
 # Not a target:
-operations/pushB.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-prep/utils.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-.c.o:
+obj/initab.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 51):
-	@cc ${CFLAGS} -c $< -o ${<:.c=.o}
+
+# Not a target:
+obj/./obj/pushB.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/./obj/main.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/./obj/initab.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+libft/libft.a:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 72):
+	@make ${@F} -C ${@D}
 	
 
 fclean: clean
@@ -262,13 +309,56 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 69):
-	@rm -f ${NAME}
-	@rm -f libft/libft.a
+#  commands to execute (from `Makefile', line 81):
+	@make $<
 	
 
 # Not a target:
 .DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/args_check.o: pushswap/args_check.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `args_check'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/args_check.o
+# automatic
+# % := 
+# automatic
+# * := args_check
+# automatic
+# + := pushswap/args_check.c
+# automatic
+# | := 
+ 
+# automatic
+# < := pushswap/args_check.c
+# automatic
+# ^ := pushswap/args_check.c
+# automatic
+# ? := pushswap/args_check.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/19=11%
+#  commands to execute (from `Makefile', line 60):
+	@mkdir -p ${@D}
+	@cc ${CFLAGS} -o $@ -c $<
+	@echo "${MAGENTA}assembling in progress...${RESET}"
+	@echo "${GREEN}done and moved into obj directory${RESET}"
+	
+
+# Not a target:
+obj/swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/reverse_rotate.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -284,106 +374,140 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 64):
+#  commands to execute (from `Makefile', line 75):
+	@rm -rf obj/
 	@rm -f ${OBJS}
-	@make clean -C libft
+	@make $@ -C ./libft/
 	@echo "${BOLDGREEN}ALL CLEAN ! ${RESET}"
 	
 
 # Not a target:
-operations/swap.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-algo/radix.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-push_swap.a: prep/args_check.o prep/initab.o prep/utils.o algo/radix.o algo/smallalgo.o operations/pushA.o operations/pushB.o operations/reverse_rotate.o operations/rotate.o operations/swap.o main.o
+obj/radix.o:
 #  Implicit rule search has not been done.
-#  Last modified 2022-08-10 23:52:41
+#  Modification time never checked.
+#  File has not been updated.
+
+push_swap: obj/args_check.o obj/initab.o obj/utils.o obj/radix.o obj/smallalgo.o obj/pushA.o obj/pushB.o obj/reverse_rotate.o obj/rotate.o obj/swap.o obj/main.o libft/libft.a
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 54):
-	@make -C libft
-	@cp libft/libft.a .
-	@mv libft.a ${NAME}
-	@echo "${GREEN}LIBFT COMPILED ${RESET}"	
-	@echo "$(MAGENTA)compiling push_swap... $(RESET)"
-	@ar rcs ${NAME} ${OBJS}
-	@echo "$(YELLOW)archiving push_swap obj... $(RESET)"
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+#  commands to execute (from `Makefile', line 67):
+	@echo "${MAGENTA}compiling push_swap... ${RESET}"
+	@cc ${CFLAGS} -o ${NAME} ${OBJS} ${LIB}
 	@echo "${GREEN}PUSH_SWAP COMPILED ${RESET}"
 	
 
 # Not a target:
-operations/reverse_rotate.o:
+obj/./obj/args_check.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-main.o:
+obj/./obj/swap.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-algo/smallalgo.o:
+obj/./obj/reverse_rotate.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-prep/initab.o:
+obj/./obj/utils.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-operations/rotate.o:
+obj/rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+obj/smallalgo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/./obj/radix.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 23:52:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/pushA.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/./obj/rotate.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/./obj/smallalgo.d:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=21/1024=2%, Rehash=0, Collisions=0/53=0%
+# Load=33/1024=3%, Rehash=0, Collisions=1/80=1%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 1
+# # of strings in strcache: 12
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# strcache free: total = 3871 / max = 3871 / min = 3871 / avg = 3871
 
-# Finished Make data base on Wed Aug 10 23:53:33 2022
+# Finished Make data base on Fri Aug 12 00:46:09 2022
 
  

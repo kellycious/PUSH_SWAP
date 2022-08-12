@@ -6,7 +6,7 @@
 #    By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 23:10:17 by khuynh            #+#    #+#              #
-#    Updated: 2022/08/05 03:31:58 by khuynh           ###   ########.fr        #
+#    Updated: 2022/08/12 01:39:54 by khuynh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,14 +81,12 @@ BOLDWHITE=    \033[1m\033[37m
 all: $(NAME)
 
 .c.o :
-	@echo "$(MAGENTA)compiling libft... $(RESET)"
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJS}
+	@echo "$(MAGENTA)compiling libft... $(RESET)"
 	@echo "$(GREEN)compiling done:$(BOLDWHITE) 100% $(RESET)"
-	@echo "$(YELLOW)archiving libft obj... $(RESET)"
 	@ar rcs ${NAME} ${OBJS}
-	@echo "$(GREEN)archiving done:$(BOLDWHITE) 100% $(RESET)"
 
 bonus: ${BONUS_OBJS}
 	@echo "$(YELLOW)archiving bonus object files... $(RESET)"
@@ -98,10 +96,9 @@ bonus: ${BONUS_OBJS}
 clean:
 	@echo "$(CYAN)cleaning... $(RESET)"
 	@rm -f ${OBJS} ${BONUS_OBJS}
-	@echo "$(GREEN)cleaning done:$(BOLDWHITE) 100% $(RESET)"
 
 fclean: clean
-	rm -rf ${NAME}
+	@rm -rf ${NAME}
 
 re: fclean all
 
