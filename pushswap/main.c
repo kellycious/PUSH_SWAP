@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:21:14 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/10 20:55:03 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:22:23 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,11 @@ int	main(int ac, char **av)
 			if (ac - 1 <= 5)
 			{
 				sort_small(&input);
-				free(input.copa);
-				free(input.index);
 			}
 			else
 				sortfinal(&input);
 		}
+		freestruct(&input);
 	}
-	return (free(input.taba), free(input.tabb), 0);
+	return (0);
 }

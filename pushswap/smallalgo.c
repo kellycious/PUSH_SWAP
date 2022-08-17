@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:10:51 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:46:44 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:12:21 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ void	sort_four(t_data *input)
 {
 	int	mini;
 
-	mini = min(input->taba, input->sizeA);
-	if (position(input->taba, input->sizeA, mini) == 1)
-		rotate_a(input->taba, input->sizeA);
-	if (position(input->taba, input->sizeA, mini) == 2)
+	mini = min(input->taba, input->sizea);
+	if (position(input->taba, input->sizea, mini) == 1)
+		rotate_a(input->taba, input->sizea);
+	if (position(input->taba, input->sizea, mini) == 2)
 	{
-		rotate_a(input->taba, input->sizeA);
-		rotate_a(input->taba, input->sizeA);
+		rotate_a(input->taba, input->sizea);
+		rotate_a(input->taba, input->sizea);
 	}
-	else if (position(input->taba, input->sizeA, mini) == 3)
-		reverse_ra(input->taba, input->sizeA);
-	if (sorted_yn(input, input->sizeA) == 0)
+	else if (position(input->taba, input->sizea, mini) == 3)
+		reverse_ra(input->taba, input->sizea);
+	if (sorted_yn(input, input->sizea) == 0)
 		return ;
 	push_b(input);
 	sort_three(input->taba, 3);
@@ -61,22 +61,22 @@ void	sort_five(t_data *input)
 {
 	int	mini;
 
-	mini = min(input->taba, input->sizeA);
-	if (position(input->taba, input->sizeA, mini) == 1)
-		rotate_a(input->taba, input->sizeA);
-	else if (position(input->taba, input->sizeA, mini) == 2)
+	mini = min(input->taba, input->sizea);
+	if (position(input->taba, input->sizea, mini) == 1)
+		rotate_a(input->taba, input->sizea);
+	else if (position(input->taba, input->sizea, mini) == 2)
 	{
-		rotate_a(input->taba, input->sizeA);
-		rotate_a(input->taba, input->sizeA);
+		rotate_a(input->taba, input->sizea);
+		rotate_a(input->taba, input->sizea);
 	}
-	else if (position(input->taba, input->sizeA, mini) == 3)
+	else if (position(input->taba, input->sizea, mini) == 3)
 	{
-		reverse_ra(input->taba, input->sizeA);
-		reverse_ra(input->taba, input->sizeA);
+		reverse_ra(input->taba, input->sizea);
+		reverse_ra(input->taba, input->sizea);
 	}
-	else if (position(input->taba, input->sizeA, mini) == 4)
-		reverse_ra(input->taba, input->sizeA);
-	if (sorted_yn(input, input->sizeA) == 0)
+	else if (position(input->taba, input->sizea, mini) == 4)
+		reverse_ra(input->taba, input->sizea);
+	if (sorted_yn(input, input->sizea) == 0)
 		return ;
 	push_b(input);
 	sort_four(input);
@@ -85,10 +85,10 @@ void	sort_five(t_data *input)
 
 void	sort_small(t_data *input)
 {
-	if (input->sizeA <= 3)
-		sort_three(input->taba, input->sizeA);
-	if (input->sizeA == 4)
+	if (input->sizea <= 3)
+		sort_three(input->taba, input->sizea);
+	if (input->sizea == 4)
 		sort_four(input);
-	if (input->sizeA == 5)
+	if (input->sizea == 5)
 		sort_five(input);
 }

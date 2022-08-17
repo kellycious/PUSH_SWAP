@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 12:55:12 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:46:30 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:10:13 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@ int	add2taba(t_data *input)
 	int		i;
 
 	i = 0;
-	duplitab = malloc(sizeof(int) * (input->sizeA + 1));
+	duplitab = malloc(sizeof(int) * (input->sizea + 1));
 	if (!duplitab)
 		return (0);
 	duplitab[0] = input->tabb[0];
-	while (i < input->sizeA)
+	while (i < input->sizea)
 	{
 		duplitab[i + 1] = input->taba[i];
 		i++;
 	}
 	free(input->taba);
 	input->taba = duplitab;
-	input->sizeA++;
+	input->sizea++;
 	return (1);
 }
 
@@ -44,17 +44,17 @@ int	delete4tabb(t_data *input)
 	int		i;
 
 	i = 0;
-	duplitab = malloc(sizeof(int) * (input->sizeB));
+	duplitab = malloc(sizeof(int) * (input->sizeb));
 	if (!duplitab)
 		return (0);
-	while (i < input->sizeB - 1)
+	while (i < input->sizeb - 1)
 	{
 		duplitab[i] = input->tabb[i + 1];
 		i++;
 	}
 	free(input->tabb);
 	input->tabb = duplitab;
-	input->sizeB--;
+	input->sizeb--;
 	return (1);
 }
 

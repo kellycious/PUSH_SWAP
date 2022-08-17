@@ -19,7 +19,7 @@ void	copacopy(t_data *input)
 	int	i;
 
 	i = 0;
-	while (i < input->sizeA)
+	while (i < input->sizea)
 	{
 		input->copa[i] = input->taba[i];
 		i++;
@@ -33,7 +33,7 @@ void	sort_arrayindex(t_data *input)
 
 	i = 0;
 	temp = 0;
-	while (i < input->sizeA - 1)
+	while (i < input->sizea - 1)
 	{
 		if (input->copa[i] > input->copa[i + 1])
 		{
@@ -56,10 +56,10 @@ void	indexmatch(t_data *input)
 
 	i = 0;
 	sort_arrayindex(input);
-	while (i < input->sizeA)
+	while (i < input->sizea)
 	{
 		j = 0;
-		while (j < input->sizeA)
+		while (j < input->sizea)
 		{
 			if (input->taba[i] == input->copa[j])
 				input->index[i] = j;
@@ -77,7 +77,7 @@ int	maxbit(t_data *input)
 	int	size;
 	int	max;
 
-	size = input->sizeA;
+	size = input->sizea;
 	max = 1;
 	while (size >> max != 0)
 		max++;
@@ -100,7 +100,7 @@ void	sortfinal(t_data *input)
 	int	size;
 
 	i = 0;
-	size = input->sizeA;
+	size = input->sizea;
 	indexmatch(input);
 	free(input->taba);
 	input->taba = input->index;
@@ -110,12 +110,12 @@ void	sortfinal(t_data *input)
 		while (j < size)
 		{
 			if (((input->taba[0] >> i) & 1) == 1)
-				rotate_a(input->taba, input->sizeA);
+				rotate_a(input->taba, input->sizea);
 			else
 				push_b(input);
 			j++;
 		}
-		while (input->sizeB != 0)
+		while (input->sizeb != 0)
 			push_a(input);
 		i++;
 	}

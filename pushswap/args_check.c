@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:12:32 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:46:19 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:47:48 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	args_ok(char **input)
 	}
 	while (input[i])
 	{
-		if (ft_atoi(input[i]) > INT_MAX)
+		if (ft_atoi(input[i]) >= 2147483648)
 		{
 			write(2, "ERROR: You have input a nb > INT_MAX or < INT_MIN\n", 51);
 			return (1);

@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:46:52 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:12:36 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ int	position(int *tab, int size, int index)
 
 int	initstruct(t_data *input, int size)
 {
-	input->sizeA = size;
-	input->sizeB = 0;
+	input->sizea = size;
+	input->sizeb = 0;
 	input->taba = malloc(sizeof(int) * size);
 	if (!input->taba)
 		return (0);

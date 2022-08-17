@@ -6,11 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:09:44 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:47:03 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:21:27 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PUSH_H
+#	ifndef PUSH_H
 # define PUSH_H
 
 # include <unistd.h>
@@ -18,15 +18,15 @@
 # include <limits.h>
 # include "../libft/libft.h"
 
-typedef	struct s_data
+typedef struct s_data
 {
 	int	*taba;
 	int	*tabb;
-	int *copa;
+	int	*copa;
 	int	*index;
-	int	sizeA;
-	int	sizeB;
-} t_data;
+	int	sizea;
+	int	sizeb;
+}	t_data;
 
 int		no_alpharg(char **args);
 int		args_ok(char **input);
@@ -34,6 +34,7 @@ int		*stack_a(t_data *data, char **input);
 int		*stack_b(int size, char **input, int *taby);
 int		check_dbl(int size, t_data *data);
 int		tab_ok(int size, char **input, t_data *data);
+void	freestruct(t_data *data);
 
 void	ft_swap(int *a, int *b);
 void	swap_a(int *taba, int size);
@@ -74,5 +75,4 @@ void	sort_arrayindex(t_data *input);
 void	indexmatch(t_data *input);
 void	copacopy(t_data *input);
 
-
-# endif
+#	endif

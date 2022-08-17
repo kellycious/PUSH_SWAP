@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:50:39 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/12 00:46:27 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/17 17:49:01 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	*stack_a(t_data *data, char **input)
 
 	i = 1;
 	j = 0;
-	while (i <= data->sizeA)
+	while (i <= data->sizea)
 	{
 		data->taba[j] = ft_atoi(input[i]);
 		i++;
@@ -57,11 +57,20 @@ int	check_dbl(int size, t_data *data)
 int	tab_ok(int size, char **input, t_data *data)
 {
 	if (size < 1 || args_ok(input) == 1)
-		return (1);
+		return (freestruct(data), 1);
 	if (check_dbl(size, data) == 1)
 	{
 		write (2, "ERROR: You have input 2 same nb\n", 33);
+		freestruct(data);
 		return (1);
 	}
 	return (0);
+}
+
+void	freestruct(t_data *data)
+{
+	free(data->taba);
+	free(data->tabb);
+	free(data->copa);
+	free(data->index);
 }

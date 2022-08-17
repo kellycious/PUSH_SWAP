@@ -34,10 +34,11 @@ long	ft_atoi(const char *nptr)
 		nptr++;
 	while (nptr[++i] && i < 13 && nptr[i] >= '0' && nptr[i] <= '9')
 	res = (res * 10 + (nptr[i] - 48));
-	if (res < INT_MAX && res > INT_MIN)
-		return (res *= minus);
-	else
+	res *= minus;
+	if (res > INT_MAX || res < INT_MIN)
 		return (2147483648);
+	else
+		return (res);
 }
 /* 
 int	main()
