@@ -6,12 +6,11 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:21:14 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/17 17:22:23 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/18 17:19:22 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
-#include <stdio.h>
 
 int	main(int ac, char **av)
 {
@@ -21,6 +20,8 @@ int	main(int ac, char **av)
 
 	taba = 0;
 	tabb = 0;
+	if (ac <= 2)
+		return (0);
 	if (!initstruct(&input, ac - 1))
 		return (0);
 	stack_a(&input, av);
@@ -30,13 +31,10 @@ int	main(int ac, char **av)
 		{
 			copacopy(&input);
 			if (ac - 1 <= 5)
-			{
 				sort_small(&input);
-			}
 			else
 				sortfinal(&input);
 		}
-		freestruct(&input);
 	}
 	return (0);
 }

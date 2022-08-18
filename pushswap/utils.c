@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 16:05:22 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/17 17:12:36 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/18 17:10:23 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	sorted_yn(t_data *input, int size)
 			return (1);
 		i++;
 	}
-	return (0);
+	return (freestruct(input), free(input->index), 0);
 }
 
 // chercher + gd nombre ds l'array pour sort3

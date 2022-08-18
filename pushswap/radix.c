@@ -119,5 +119,5 @@ void	sortfinal(t_data *input)
 			push_a(input);
 		i++;
 	}
-	free(input->copa);
+	freestruct(input);
 }

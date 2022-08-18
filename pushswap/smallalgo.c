@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 15:10:51 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/17 17:12:21 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/18 17:19:55 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,6 @@ void	sort_small(t_data *input)
 		sort_four(input);
 	if (input->sizea == 5)
 		sort_five(input);
+	freestruct(input);
+	free(input->index);
 }
