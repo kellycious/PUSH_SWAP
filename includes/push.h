@@ -6,7 +6,7 @@
 /*   By: khuynh <khuynh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:09:44 by khuynh            #+#    #+#             */
-/*   Updated: 2022/08/17 17:21:27 by khuynh           ###   ########.fr       */
+/*   Updated: 2022/08/21 18:40:11 by khuynh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,7 @@ void	sortfinal(t_data *input);
 void	sort_arrayindex(t_data *input);
 void	indexmatch(t_data *input);
 void	copacopy(t_data *input);
+
+void	sorter(t_data input);
 
 #	endif
