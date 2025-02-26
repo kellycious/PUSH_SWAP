@@ -1,0 +1,84 @@
+Sorting algorithm: ordre croissant dans A avec le moins de coups possibles
+
+			A 							B
+	random unique int (+/-)			  empty
+			1 (first of the stack)
+			2
+			3
+			4
+			5
+
+swap a/b (sa/sb): swap first 2 int
+ss: swap a/b at the same time
+push a/b (pa/pb): first int at b top > a top
+rotate a/b (ra/rb): shift up all int by 1, first int becomes last 
+rr: rotate a/b at the same time
+reverse rotate a/b (rra/rrb): shift down by 1
+rrr: reverse rotate at the same time 
+
+
+RULES
+makefile
+functions: read, write, malloc, free, exit + libft
+no parameters input: give the prompt back
+false arguments, bigger than int or duplicates: Error on the standard error (2, "Error\n", 6);
+return: all instructions to sort out ints 
+
+BONUS
+checker: scan the instructions + execute them, if sorted and B empty display OK else KO
+Standard Error if false arg input
+
+------------------------------------------------------------
+
+INSERTION SORT ALGO 
+	1- find smallest int
+	2- move smallest to the top
+	3- push it to b
+	4- 1,2,3 re
+	5- push back to A
+
+	>> for larger nb of int 
+		divide by group of 5 (A = 0 - 19, B = 20 - 39)
+		1- scan and store 2 int from group A 
+		2- check nb of moves to put them on top, execute the smallest move
+		3- repeat steps per chunk, careful that smallest always on top of B 
+		4- pull back to A when it is empty
+
+----------------------------------------------------------
+
+stack 3 < 3 instructions
+stack 5 < 12 instructions
+stack 100 < 700 instructions 
+stack 500 < 5500 instructions
+
+SORT 3
+
+213 | 132 | 321 = SA 
+312 = RA 
+231 = RRA 
+
+1 : 1
+3 : 11
+2 : 10
+
+(ra)
+
+3 : 11
+2 : 10
+1 : 1
+
+(ra)
+
+2 : 10
+1 : 1
+3 : 11
+
+(pb)
+
+1 : 1			2:10
+3 : 11
+
+(ra)
+
+3 : 11			2:10
+1 : 1
